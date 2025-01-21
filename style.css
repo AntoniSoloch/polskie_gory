@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 98vw;
+    background-color: #f3f3f3;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    height: 200px;
+    width: 80%;
+    margin-left: 5%;
+    background-color: #e6e6e6;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.right, .left{
+    height: 100%;
+    width: 50%;
+}
+.logo{
+    background-image: url(images/logo.png);
+    height: 200px;
+    width: 200px;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+h1{
+    width: 50%;
+    height: 10%;
+    font-size: 45px;
+}
+#navbar {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    width: 35%;
+    float: right;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+#navbar a {
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+}
+
+#navbar a:focus {
+    text-decoration: underline;
+    background-color: #d1d1d1;
+}
+
+#dark_mode {
+    margin: 10px;
+    padding: 10px 15px;
+    height: 60px;
+    width: 120px;
+    background-color: #c0c0c0;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-right: 10%;
+}
+
+#dark_mode:hover {
+    background-color: #a0a0a0;
+}
+section{
+    height: 700px;
+    width: 65%;
+    margin-left: 10%;
+    margin-top: 200px;
+}
+section div{
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 30px;
+}
+section article{
+    height: 200px;
+    width: 100%;
+}
+p{
+    width: 70%;
+    margin-top: 2%;
+    text-align: left;
+    margin-left: 10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+#skrzyczne{
+    background-image: url(images/skrzyczne.webp);
+}
+#babia{
+    background-image: url(images/Babia.jpg);
+}
+#gory_stolowe{
+    background-image: url(images/gory_stolowe.jpg);
+}
+#ostry{
+    background-image: url(images/ostry_wierch.jpg);
+}
+#wielka{
+    background-image: url(images/wielka_racza.jpg);
+}
+.up-arrow{
+    background-image: url(images/up-arrow.png);
+    height: 200px;
+    width: 80px;
+    position: fixed;
+    right: 200px;
+    bottom: 100px;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 1300px){
+    .up-arrow{
+        right: 100px;
+    }
+}
+hr{
+    width: 90%;
+}
