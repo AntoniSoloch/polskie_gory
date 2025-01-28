@@ -39,6 +39,10 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium autem voluptatibus eos eum perspiciatis nam sed sint, maiores, cum distinctio voluptates facere temporibus sapiente! Obcaecati animi deserunt officia a nihil?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nulla voluptatem aliquid? Eveniet voluptatum possimus voluptatem dolor dolore inventore fuga commodi blanditiis quam, optio ratione, ab suscipit incidunt nisi earum?
             </p>
+            <div class="wrapper">
+                <input type="checkbox" class="heart-checkbox" id="heart-checkbox">
+                <label class="heart" for="heart-checkbox"></label>
+              </div>
         </article>
     </section>
     <hr>
@@ -93,5 +97,21 @@
             </p>
         </article>
     </section>
+    <script>
+        serce = document.getElementById("heart");
+        let isRed= false;
+        function change_btn_bg() {
+            if(isRed==false){
+                serce.style.backgroundImage="url(images/red-heart.png)";
+                isRed=true;
+            }
+            else{
+                serce.style.backgroundImage="url(images/empty-heart.png)";
+                isRed=false;
+            }
+        }
+
+
+    </script>
 </body>
 </html>

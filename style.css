@@ -10,6 +10,7 @@ header{
     height: 200px;
     width: 80%;
     margin-left: 5%;
+    margin-bottom: 50px;
     background-color: #e6e6e6;
     padding: 3%;
     display: flex;
@@ -41,10 +42,12 @@ h1{
 #navbar {
     color: rgb(0, 0, 0);
     padding: 10px;
+    margin-top: 50px;
     width: 50%;
     float: right;
     display: flex;
     justify-content: center;
+    margin-top: 0;
 }
 
 #navbar ul {
@@ -58,6 +61,9 @@ h1{
     flex-direction: column;
     margin-right: 15px;
     font-size: 22px;
+    border: 1px, solid black;
+    border-radius: 5px;
+    text-wrap: nowrap;
 }
 
 #navbar a {
@@ -109,6 +115,7 @@ section article{
     height: 200px;
     width: 100%;
 }
+
 p{
     width: 70%;
     margin-top: 2%;
@@ -117,6 +124,36 @@ p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
 }
+
+/*-------*/
+.heart-checkbox {
+    display: none;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    background-image: url(images/empty-heart.png);
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .heart:before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 25px;
+    top: 0;
+  }
+  
+  .heart-checkbox:checked + .heart {
+    background-image: url(images/red-heart.png);
+  }  
+
 #skrzyczne{
     background-image: url(images/skrzyczne.webp);
 }
@@ -157,15 +194,40 @@ p{
 }
 @media screen and (max-width: 700px) {
     header{
-        height: 300px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        float: top;
+        height: 200px;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        margin-top: 0;
+    }
+    h1, nav{
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
     }
     section{
         width: 100%;
         height: 800px;
-        margin: auto;
+        margin: 0;
+    }
+    .up-arrow{
+        display: none;
+    }
+    section{
+        font-size: 15px;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
     header{
         height: 900px;
         display: flex;
@@ -186,8 +248,9 @@ p{
         flex-direction: column;
     }
     section{
-        width: 90%;
+        width: 100%;
         height: 1000px;
+        margin: 0;
     }
     section img{
         height: 600px;
