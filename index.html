@@ -6,15 +6,16 @@
     <title>Mój blog</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <header id="header">
         <div class="left">
-            <div class="logo">
+            <div id="logo">
             </div>
         </div>
         <div class="right">
             <h1>Blog o górach Polski</h1>
             <nav id="navbar">
+                <button onclick="dark_mode()" id="dark_mode">tryb nocny...</button>
                 <ul>
                     <li><a href="#skrzyczne">Skrzyczne</a></li>
                     <li><a href="#gory_stolowe">Góry Stołowe</a></li>
@@ -34,15 +35,15 @@
             <h2>Skrzyczne</h2>
         </div>
         <article>
+            <div class="wrapper">
+                <input type="checkbox" class="heart-checkbox" id="heart-checkbox">
+                <label class="heart" for="heart-checkbox"></label>
+            </div>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias ullam illum ex cupiditate minus, fugit iste suscipit maxime? Repellat totam dignissimos sapiente hic quo voluptatum iste quisquam laudantium laboriosam illum.
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium autem voluptatibus eos eum perspiciatis nam sed sint, maiores, cum distinctio voluptates facere temporibus sapiente! Obcaecati animi deserunt officia a nihil?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nulla voluptatem aliquid? Eveniet voluptatum possimus voluptatem dolor dolore inventore fuga commodi blanditiis quam, optio ratione, ab suscipit incidunt nisi earum?
             </p>
-            <div class="wrapper">
-                <input type="checkbox" class="heart-checkbox" id="heart-checkbox">
-                <label class="heart" for="heart-checkbox"></label>
-              </div>
         </article>
     </section>
     <hr>
@@ -98,20 +99,20 @@
         </article>
     </section>
     <script>
-        serce = document.getElementById("heart");
-        let isRed= false;
-        function change_btn_bg() {
-            if(isRed==false){
-                serce.style.backgroundImage="url(images/red-heart.png)";
-                isRed=true;
-            }
-            else{
-                serce.style.backgroundImage="url(images/empty-heart.png)";
-                isRed=false;
+        let is_dark = false;
+        let body=document.getElementById("body");
+        let header=document.getElementById("header");
+        function dark_mode(){
+            is_dark=!is_dark;
+            if(is_dark){
+                body.style.backgroundColor="#999999";
+                header.style.backgroundColor="#888888";
+            }else{
+                body.style.backgroundColor="#f3f3f3";
+                header.style.backgroundColor="#e6e6e6";
             }
         }
-
-
+        dark_mode;
     </script>
 </body>
 </html>

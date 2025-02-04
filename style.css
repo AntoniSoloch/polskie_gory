@@ -26,18 +26,25 @@ header{
 .right{
     width: 60%;
 }
-.logo{
+#logo{
     background-image: url(images/logo.png);
     height: 200px;
     width: 200px;
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
+    background-color: #e6e6e6;
 }
 h1{
     width: 50%;
     height: 10%;
     font-size: 45px;
+    cursor: default;
+    user-select: none;
+}
+h2{
+    cursor: default;
+    user-select: none;
 }
 #navbar {
     color: rgb(0, 0, 0);
@@ -48,6 +55,11 @@ h1{
     display: flex;
     justify-content: center;
     margin-top: 0;
+    margin-bottom: 20px;
+}
+#dark_mode{
+    height: 80%;
+    cursor: pointer;
 }
 
 #navbar ul {
@@ -123,37 +135,9 @@ p{
     margin-left: 10%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
+    cursor: default;
+    user-select: none;
 }
-
-/*-------*/
-.heart-checkbox {
-    display: none;
-  }
-  
-  .heart::before,
-  .heart::after {
-    content: "";
-    background-image: url(images/empty-heart.png);
-    border-radius: 50%;
-    height: 50px;
-    position: absolute;
-    width: 50px;
-  }
-  
-  .heart:before {
-    top: -25px;
-    left: 0;
-  }
-  
-  .heart:after {
-    left: 25px;
-    top: 0;
-  }
-  
-  .heart-checkbox:checked + .heart {
-    background-image: url(images/red-heart.png);
-  }  
-
 #skrzyczne{
     background-image: url(images/skrzyczne.webp);
 }
@@ -228,6 +212,10 @@ p{
     }
 }
 @media screen and (max-width: 550px) {
+    body{
+        width: 90wv;
+        margin: 0;
+    }
     header{
         height: 900px;
         display: flex;
@@ -263,3 +251,50 @@ p{
 hr{
     width: 90%;
 }
+.heart {
+    color: #e0e0e0;
+    background-color: currentColor;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 50px;
+    cursor: pointer;
+  }
+  
+  .heart-checkbox {
+    display: none;
+  }
+  
+  .heart::before,
+  .heart::after {
+    border: none;
+    content: "";
+    background-color: currentColor;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+  }
+  .heart:before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 25px;
+    top: 0;
+  }
+  .heart-checkbox:checked + .heart {
+    color: rgb(240, 71, 71);
+  }
+  .wrapper{
+    height: 0;
+    width: 0;
+  }
+  
